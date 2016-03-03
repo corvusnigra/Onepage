@@ -20,6 +20,18 @@ strong,b
 
 header
 	padding: 40px
+
+.logo
+	text-transform: uppercase
+	color: #fff
+	font-size: 33px
+	font-weight: bold
+	display: block
+	width: 92px
+	word-wrap: break-word
+	line-height: 1
+	span
+		color: $accent
 .top-menu
 	ul,li
 		margin: 0
@@ -27,6 +39,8 @@ header
 		list-style-type: none
 		li
 			float: right
+			&:first-child
+				border-right: 2px solid $accent
 			a
 				padding: 10px 20px
 				display: block
@@ -36,6 +50,7 @@ header
 				border-bottom: 2px solid $accent
 				border-left: 2px solid $accent
 				transition: all .25s
+	
 				&:hover
 					color: $accent
 					text-decoration: none
