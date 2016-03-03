@@ -18,6 +18,8 @@ h1,h2,h3,h4,h5,h6
 strong,b
 	font-family: Merriweather 
 
+header
+	padding: 40px
 .top-menu
 	ul,li
 		margin: 0
@@ -30,7 +32,15 @@ strong,b
 				display: block
 				text-transform: uppercase
 				color: #fff
-				border: 1px solid $accent
+				border-top: 2px solid $accent
+				border-bottom: 2px solid $accent
+				border-left: 2px solid $accent
+				transition: all .25s
+				&:hover
+					color: $accent
+					text-decoration: none
+				&:focus
+					text-decoration: none
 
 
 .hidden
