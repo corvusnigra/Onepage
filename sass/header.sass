@@ -21,6 +21,46 @@ strong,b
 header
 	padding: 40px
 
+.top-icons
+	padding-top: 10px
+	a
+		display: block
+		font-size: 24px
+		background: #fff
+		border-radius: 50%
+		width: 30px
+		height: 30px
+		position: relative
+		margin: 9px 0
+		transition: all .3s
+		&:nth-of-type(1)
+			i
+				left: 4px
+				top: 2px
+				font-size: 26px
+
+		&:nth-of-type(2)
+			i
+				left: 5px
+				top: 3px
+				font-size: 26px
+
+		&:nth-of-type(3)
+			i
+				left: 4px
+				top: 4px
+				font-size: 22px
+
+		&:hover
+			background: $accent
+			i
+				color: #fff
+		i
+			position: absolute
+			left: 3px
+			top: 5px
+			color: #000
+
 .logo
 	text-transform: uppercase
 	color: #fff
@@ -30,6 +70,9 @@ header
 	width: 92px
 	word-wrap: break-word
 	line-height: 1
+	&:hover
+		text-decoration: none
+		color: #fff
 	span
 		color: $accent
 .top-menu
