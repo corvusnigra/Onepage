@@ -1,5 +1,23 @@
 $(function() {
 
+	$("a[href=#about]").click(function(){
+		$("html,body").animate({
+			scrollTop : $(".s-about").offset().top
+		}, 1000);
+	});
+
+	$("a[href=#services]").click(function(){
+		$("html,body").animate({
+			scrollTop : $(".s-services").offset().top
+		}, 1000);
+	});
+
+	$("a[href=#contact]").click(function(){
+		$("html,body").animate({
+			scrollTop : $(".s-contact").offset().top
+		}, 1000);
+	});
+
 	//SVG Fallback
 	if(!Modernizr.svg) {
 		$("img[src*='svg']").attr("src", function() {

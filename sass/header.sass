@@ -156,7 +156,62 @@ header
 	img
 		width: 170%
 		transform: rotate(28deg)
-		
+
+.block-contact
+	h2
+		font-size: em(69px)
+		color: $accent
+
+.block-btn
+	height: 200px
+	padding: 100px 0
+	text-align: right
+	.button
+
+
+.button
+	color: #fff
+	text-transform: uppercase
+	background-color: $accent
+	display: inline-block
+	padding: 4px 20px
+	border-radius: 18px
+	transition: all .3s
+	font-weight: bold
+	text-decoration: none
+	&:hover
+		text-decoration: none
+		background-color: lighten($accent, 7%)
+		color: black
+	&:visited
+		text-decoration: none 
+		color: white
+	&:active
+		background-color: darken($accent, 7%)
+    text-decoration: none 
+    color: black
+
+.button-square
+	border-radius: 0
+	background: transparent
+	border: 2px solid $accent
+	&:hover
+		background: $accent
+
+
+
+
+
 .hidden
 	display: none
 
+.block-textarea
+	textarea
+		display: block
+		margin: 0 0 20px 0
+		border-radius: 9px
+		width: 100%
+		padding: 20px
+		&::placeholder
+			color: #d3d3d3
+	
