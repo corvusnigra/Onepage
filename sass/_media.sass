@@ -4,16 +4,23 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
-
+	.block-about-img
+		img
+			max-width: 100%
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
+	.top-text
+		font-size: em(40px)
+	
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.top-text
+		h1
+			width: 100%
+		font-size: em(30px)
 	
 	/*Disable Animation on Mobile Devices*/
 	.animated
@@ -40,7 +47,19 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
-
+	.top-menu
+		ul
+			margin-top: 20px
+			li
+				float: none
+				a
+					text-align: center
+				&:nth-child(n+2)
+					border-right: 1px solid $accent
+	.top-icons
+		text-align: center
+		a
+			display: inline-block
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
