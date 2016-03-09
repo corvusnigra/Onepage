@@ -195,6 +195,7 @@ header
 	border-radius: 0
 	background: transparent
 	border: 2px solid $accent
+	letter-spacing: 1px
 	&:hover
 		background: $accent
 
@@ -212,6 +213,55 @@ header
 		border-radius: 9px
 		width: 100%
 		padding: 20px
+		outline: none
+		color: #000
 		&::placeholder
 			color: #d3d3d3
+
+.s-contact
+	padding-bottom: 80px
+	h4
+		font-size: em(20px)
+
+.copy
+	display: inline-block
+	height: 100px
+	padding-top: 50px
 	
+.phone
+	padding: 10px 0
+	span
+		display: block
+		&:nth-child(2)
+			font-size: em(22px)
+			color: $accent
+			font-weight: bold
+.email
+	padding: 10px 0
+	span
+		display: block
+		&:nth-child(2)
+			font-size: em(20px)
+			a
+				color: #fff
+
+.arrow-menu
+	width: 50px
+	height: 50px
+	position: fixed
+	bottom: 10%
+	right: 10%
+	display: none
+	background: #fff
+	opacity: 0.1
+	border-radius: 9px
+	cursor: pointer
+	i
+		font-size: 36px
+		color: #000
+		position: absolute
+		top: 5px
+		left: 6px
+
+.show-menu
+	display: block

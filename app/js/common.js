@@ -18,6 +18,22 @@ $(function() {
 		}, 1000);
 	});
 
+	$(".arrow-menu").click(function(){
+		$("html,body").animate({
+			scrollTop : $("header").offset().top
+		}, 1000);
+	});
+  
+ 
+	// init controller
+	var controller = new ScrollMagic.Controller();
+
+
+	// build scene
+	var scene = new ScrollMagic.Scene({triggerElement: ".s-about"})
+		.setClassToggle(".arrow-menu", "show-menu")
+		.addTo(controller);
+
 	//SVG Fallback
 	if(!Modernizr.svg) {
 		$("img[src*='svg']").attr("src", function() {
