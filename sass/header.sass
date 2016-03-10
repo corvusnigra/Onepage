@@ -83,8 +83,6 @@ header
 		list-style-type: none
 		li
 			float: right
-			&:first-child
-				border-right: 2px solid $accent
 			a
 				padding: 10px 20px
 				display: block
@@ -256,12 +254,15 @@ header
 	opacity: 0.1
 	border-radius: 9px
 	cursor: pointer
+	transition: all .3s
 	i
 		font-size: 36px
 		color: #000
 		position: absolute
 		top: 5px
 		left: 6px
+	&:hover
+		opacity: .4
 
 .img-services
 	img
@@ -272,5 +273,70 @@ header
 		transform: scale(1)
 
 
+.icon-menu
+	display: none
+
+.menu-fixed
+	position: fixed
+	top: 0
+	right: 0
+	z-index: 100
+	transition: all .3s
+	li
+		background: $main-color
+	.icon-menu
+		position: absolute
+		display: block
+		width: 30px
+		height: 35px
+		top: 4px
+		left: -35px
+
+.menu-fixed 
+	.icon-menu
+		background: none
+		cursor: pointer
+
+.menu-fixed.hide-menu
+	transform: translateX(100%)
+
+a[href="#contact"]
+	border: 1px solid $accent
+
 .show-menu
 	display: block
+
+
+.icon-menu
+	span
+		width: 24px
+		height: 2px
+		background: #fff
+		display: block
+		position: relative
+		z-index: -1
+		top: 12px
+		left: 1px
+		transition: all 0.3s
+		&::before,&::after
+			content: ''
+			width: 24px
+			height: 2px
+			background: #fff
+			display: block
+			position: absolute
+			top: 10px
+			transition: all 0.3s
+		&::after
+			top: 20px
+
+.icon-menu.on
+	span
+		background: transparent
+		&::before
+			transform: rotate(45deg) translate(-1px, 0px)
+		&::after
+			transform: rotate(-45deg) translate(7px, -8px)
+			
+
+

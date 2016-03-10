@@ -34,14 +34,28 @@ $(function() {
 		.setClassToggle(".arrow-menu", "show-menu")
 		.addTo(controller);
 
-		var imgscene = new ScrollMagic.Scene({
+	var imgscene = new ScrollMagic.Scene({
 			triggerElement: ".s-services"
 		}).setClassToggle(".img-services", "up") 
+			.addTo(controller);
+
+	var imgscene = new ScrollMagic.Scene({
+			triggerElement: ".top-icons",
+			offset: 500
+		}).setClassToggle(".top-menu ul", "menu-fixed") 
 			.addTo(controller);
 
 	$(".img-services img").each( function(index){
     $(this).css('transition-delay', index/10 +'s');
 	});
+
+	$(".icon-menu").click(function(){
+		$(".top-menu ul").toggleClass("hide-menu");
+		$(".top-menu .icon-menu").toggleClass("on");
+		$(".top-menu ul").find(".fa").toggleClass("fa-chevron-right fa-chevron-left");
+	});
+
+
 
 	// 	var yoyo_tween = TweenMax.to('.img-services img', 1, {
 	// 		transform: 'scale(1)',
