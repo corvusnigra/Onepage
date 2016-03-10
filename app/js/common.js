@@ -34,6 +34,27 @@ $(function() {
 		.setClassToggle(".arrow-menu", "show-menu")
 		.addTo(controller);
 
+		var imgscene = new ScrollMagic.Scene({
+			triggerElement: ".s-services"
+		}).setClassToggle(".img-services", "up") 
+			.addTo(controller);
+
+	$(".img-services img").each( function(index){
+    $(this).css('transition-delay', index/10 +'s');
+	});
+
+	// 	var yoyo_tween = TweenMax.to('.img-services img', 1, {
+	// 		transform: 'scale(1)',
+	// 		ease: Cubic.easeOut,
+ //      repeat: -1, // this negative value repeats the animation
+ //      yoyo: true // make it bounce…yo!
+ //    });
+
+	// var imgscene = new ScrollMagic.Scene({
+	// 		triggerElement: ".s-services"
+	// 	}).setTween(yoyo_tween) 
+	// 		.addTo(controller);
+
 	//SVG Fallback
 	if(!Modernizr.svg) {
 		$("img[src*='svg']").attr("src", function() {
